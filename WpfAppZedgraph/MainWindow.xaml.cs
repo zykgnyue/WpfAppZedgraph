@@ -60,7 +60,7 @@ namespace WpfAppZedgraph
 
             LineItem curve1 = myPane.AddCurve("Voltage1", list1,System.Drawing.Color.Blue, SymbolType.None/*.Diamond*/ );
             LineItem curve2 = myPane.AddCurve("Voltage2", list2, System.Drawing.Color.Red, SymbolType.None);
-
+        
             curve2.IsY2Axis = true;
             myPane.Y2Axis.IsVisible = true;
             myPane.Y2Axis.Scale.Min = -5.0;
