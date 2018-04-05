@@ -14,7 +14,7 @@
             <RowDefinition Height="*" />
 
         </Grid.RowDefinitions>
-        <WindowsFormsHost Grid.Row="0" Name="windowsFormsHost1" Margin="0,10,0,0" Height="330">
+        <WindowsFormsHost Grid.Row="0" Name="windowsFormsHost1" Margin="0,10,0,0" Height="330" Width="600">
             <zed:ZedGraphControl x:Name="zedgraph"
                              Width="500"
                              Height="320" />

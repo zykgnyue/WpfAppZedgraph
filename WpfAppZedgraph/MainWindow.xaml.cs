@@ -42,7 +42,8 @@ namespace WpfAppZedgraph
             /// 设置X轴说明文字
             myPane.XAxis.Title.Text = "Time, Seconds";
             /// 设置Y轴文字
-            myPane.YAxis.Title.Text = "Sample Potential, Volts";
+            myPane.YAxis.Title.Text = "Sample Potential, Volts1";
+            myPane.Y2Axis.Title.Text = "Sample Potential, Volts2";
             /// Save 1200 points. At 50 ms sample rate, this is one minute 
             /// The RollingPointPairList is an efficient storage class that always 
             /// keeps a rolling set of point data without needing to shift any data values 
@@ -61,6 +62,11 @@ namespace WpfAppZedgraph
             LineItem curve2 = myPane.AddCurve("Voltage2", list2, System.Drawing.Color.Red, SymbolType.None);
 
             curve2.IsY2Axis = true;
+            myPane.Y2Axis.IsVisible = true;
+            myPane.Y2Axis.Scale.Min = -5.0;
+            myPane.Y2Axis.Scale.Max = 5.0;
+            // Align the Y2 axis labels so they are flush to the axis
+            myPane.Y2Axis.Scale.Align = AlignP.Inside;
             //curve2.YAxisIndex = 1;
 
             myPane.Y2Axis.Scale.MaxAuto=false;
